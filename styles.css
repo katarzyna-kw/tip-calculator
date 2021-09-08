@@ -1,0 +1,157 @@
+body {
+   background-color: #c5e4e7;
+   font-family: 'Space Mono', serif;
+   font-size: 16px;
+   margin: 0;
+}
+
+header {
+   display: flex;
+   justify-content: center;
+   color: #00474b;
+   text-transform: uppercase;
+   letter-spacing: .7rem;
+   margin: 1rem 0 .7rem 0;
+}
+
+main {
+   background-color: #fff;
+   border-top-left-radius: 15px;
+   border-top-right-radius: 15px;
+}
+
+.calculator-input {
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: flex-start;
+   align-items: center;
+   padding: 1.7rem;
+   color: #697778;
+}
+
+.bill-container,
+.quantity {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: flex-start;
+   flex-flow: column wrap;
+}
+
+.icon-input {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 90%;
+   background-color: #f3f8fb;
+   font-size: 1.25rem;
+   margin-top: .5rem;
+   color: #adc5c5;
+}
+
+.input-full {
+   border: 0;
+   width: 90%;
+   font-family: "Space Mono", serif;
+   background-color: #f3f8fb;
+   font-size: 1.5rem;
+   text-align: right;
+}
+
+.select-tip,
+.quantity {
+   margin-top: 2rem;
+}
+
+.button-container {
+   display: flex;
+   flex-flow: row wrap;
+}
+
+.calculator-input button {
+   background-color: #00474b;
+   color: #fff;
+   border: 0;
+   font-family: "Space Mono", serif;
+   font-size: 1.5rem;
+   width: 140px;
+   margin-top: 1rem;
+   padding: .4rem 0rem .4rem 0rem;
+   border-radius: 6px;
+}
+
+.calculator-input button:hover {
+   background-color: #26c2ad;
+   color: #00474b;
+}
+
+.calculator-output {
+   background-color: #00474b;
+   color: #fff;
+   margin: 1.5rem;
+   border-radius: 15px;
+   padding-left: 1.5rem;
+   padding-right: 1.5rem;
+}
+
+.select-tip button {
+   background-color: #26c2ad;
+   color: #00474b;
+   border: 0;
+}
+
+#button-custom {
+   border: 0;
+   background-color: #f3f8fb;
+   width: 122px;
+   border-radius: 6px;
+   height: 48.78px;
+   margin-top: -10px;
+   font-family: "Space Mono", serif;
+   text-align: right;
+   font-size: 1.25rem;
+   padding-right: 1rem;
+}
+
+.amount-tip,
+.amount-total {
+   display: flex;
+   justify-content: space-between;
+}
+
+.amount-tip {
+   padding-top: 2.5rem;
+}
+
+.child {
+   flex: 1;
+}
+
+.amount-total {
+   padding-top: 1.5rem;
+}
+
+.amount {
+   font-size: 3rem;
+   color: #26c2ad;
+}
+
+.button-reset {
+   margin: 1.5rem 0 1.5rem 0;
+   width: 100%;
+   font-family: "Space Mono", serif;
+   font-size: 1.5rem;
+   text-transform: uppercase;
+   border-radius: 6px;
+   background-color: #26c2ad;
+}
+
+
+
+.attribution { 
+   font-size: 11px; 
+   text-align: center; 
+}
+.attribution a { 
+   color: hsl(228, 45%, 44%); 
+}
