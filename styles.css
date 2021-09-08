@@ -5,6 +5,13 @@ body {
    margin: 0;
 }
 
+.container {
+   display: flex;
+   flex-flow: column wrap;
+   align-items: center;
+   justify-content: center;
+}
+
 header {
    display: flex;
    justify-content: center;
@@ -45,18 +52,21 @@ main {
    display: flex;
    justify-content: center;
    align-items: center;
-   width: 90%;
-   background-color: #f3f8fb;
+   width: 100%;
+   /* background-color: #f3f8fb; */
+   background-color: hotpink;
    font-size: 1.25rem;
    margin-top: .5rem;
    color: #adc5c5;
+   border-radius: 6px;
 }
 
 .input-full {
    border: 0;
    width: 90%;
    font-family: "Space Mono", serif;
-   background-color: #f3f8fb;
+   /* background-color: #f3f8fb; */
+   background-color: hotpink;
    font-size: 1.5rem;
    text-align: right;
 }
@@ -69,13 +79,14 @@ main {
 .percent-button-container {
    display: flex;
    flex-flow: row wrap;
+   justify-content: space-around;
 }
 
 .percent-buttons {
    border: 0;
    font-family: "Space Mono", serif;
    font-size: 1.5rem;
-   width: 140px;
+   width: 45%;
    margin-top: 1rem;
    padding: .4rem 0rem .4rem 0rem;
    border-radius: 6px;
@@ -94,14 +105,16 @@ main {
 #percent-button-custom {
    border: 0;
    background-color: #f3f8fb;
-   width: 122px;
+   /* background-color: lawngreen; */
+   width: 40%;
    border-radius: 6px;
    height: 48.78px;
-   margin-top: -10px;
    font-family: "Space Mono", serif;
    text-align: right;
    font-size: 1.25rem;
    padding-right: 1rem;
+   padding-top: 0;
+   padding-bottom: 0;
 }
 
 .calculator-output {
@@ -170,7 +183,6 @@ main {
 @media (min-width: 768px) {
 
    .container {
-      display: flex;
       flex-wrap: wrap;
       justify-content: center;
    }
@@ -178,14 +190,33 @@ main {
    header {
       flex-basis: 100%;
    }
+
    main {
       flex-flow: row wrap;
-      width: 60%;
+      width: 90%;
       border-bottom-left-radius: 15px;
       border-bottom-right-radius: 15px;
+   }
+
+   .percent-buttons {
+      width: 31%;
+   }
+
+   #percent-button-custom {
+      width: 25%;
+   }
+
+   #reset {
+      margin-top: 8.5rem;
    }
 
    .attribution {
       background-color: #c5e4e7;
    }
+}
+
+@media (min-width: 1200px) {
+   main {
+      width: 70%;
+
 }
