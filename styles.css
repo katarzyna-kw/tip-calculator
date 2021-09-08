@@ -15,12 +15,16 @@ header {
 }
 
 main {
+   display: flex;
+   flex-flow: column wrap;
    background-color: #fff;
    border-top-left-radius: 15px;
    border-top-right-radius: 15px;
+   padding-bottom: 1rem;
 }
 
 .calculator-input {
+   flex: 1;
    display: flex;
    flex-flow: row wrap;
    justify-content: flex-start;
@@ -29,8 +33,7 @@ main {
    color: #697778;
 }
 
-.bill-container,
-.quantity {
+.calc-input-section {
    width: 100%;
    display: flex;
    justify-content: center;
@@ -58,19 +61,17 @@ main {
    text-align: right;
 }
 
-.select-tip,
+.percent,
 .quantity {
    margin-top: 2rem;
 }
 
-.button-container {
+.percent-button-container {
    display: flex;
    flex-flow: row wrap;
 }
 
-.calculator-input button {
-   background-color: #00474b;
-   color: #fff;
+.percent-buttons {
    border: 0;
    font-family: "Space Mono", serif;
    font-size: 1.5rem;
@@ -80,27 +81,17 @@ main {
    border-radius: 6px;
 }
 
-.calculator-input button:hover {
-   background-color: #26c2ad;
-   color: #00474b;
-}
-
-.calculator-output {
+.inactive {
    background-color: #00474b;
    color: #fff;
-   margin: 1.5rem;
-   border-radius: 15px;
-   padding-left: 1.5rem;
-   padding-right: 1.5rem;
 }
 
-.select-tip button {
+.active {
    background-color: #26c2ad;
    color: #00474b;
-   border: 0;
 }
 
-#button-custom {
+#percent-button-custom {
    border: 0;
    background-color: #f3f8fb;
    width: 122px;
@@ -113,18 +104,24 @@ main {
    padding-right: 1rem;
 }
 
-.amount-tip,
-.amount-total {
+.calculator-output {
+   flex: 1;
+   background-color: #00474b;
+   color: #fff;
+   margin: 1.5rem;
+   border-radius: 15px;
+   padding-left: 1.5rem;
+   padding-right: 1.5rem;
+   padding-bottom: 1.5rem;
+}
+
+.calc-output-section {
    display: flex;
    justify-content: space-between;
 }
 
 .amount-tip {
    padding-top: 2.5rem;
-}
-
-.child {
-   flex: 1;
 }
 
 .amount-total {
@@ -136,22 +133,59 @@ main {
    color: #26c2ad;
 }
 
-.button-reset {
-   margin: 1.5rem 0 1.5rem 0;
+#reset {
+   display: flex;
+   justify-content: center;
    width: 100%;
+   border: none;
+   border-radius: 6px;
    font-family: "Space Mono", serif;
    font-size: 1.5rem;
    text-transform: uppercase;
-   border-radius: 6px;
    background-color: #26c2ad;
+   color: #00474b;
+   margin-top: 1.5rem;
 }
 
+.error {
+   border: 1px red solid;
+   border-radius: 3px;
+}
 
+.hide {
+   display: none;
+}
 
 .attribution { 
    font-size: 11px; 
    text-align: center; 
+   background-color: #fff;
+   margin-top: 0;
+   padding: 1rem;
 }
 .attribution a { 
    color: hsl(228, 45%, 44%); 
+}
+
+@media (min-width: 768px) {
+
+   .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+   }
+
+   header {
+      flex-basis: 100%;
+   }
+   main {
+      flex-flow: row wrap;
+      width: 60%;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+   }
+
+   .attribution {
+      background-color: #c5e4e7;
+   }
 }

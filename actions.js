@@ -11,7 +11,7 @@ const getTip = () => {
    bill=parseFloat(billAmount.value)
 
    if (isNaN(bill)) {
-      console.log("error on bill!")
+   console.log("error on bill")
    }
 
    party=parseFloat(partySize.value)
@@ -24,12 +24,20 @@ const getTip = () => {
 }
 
 const getPercentage = (percent, index) => {
-   if (index<5) percentage=percent
+   for (let i=0; i<5; i++) {
+      console.log(document.getElementsByClassName("percent-buttons")[i])
+      document.getElementsByClassName("percent-buttons")[i].classList.remove("active")
+      document.getElementsByClassName("percent-buttons")[i].classList.add("inactive")
+   }
+   if (index<5) {
+      percentage=percent
+      document.getElementsByClassName("percent-buttons")[index].classList.add("active")
+      document.getElementsByClassName("percent-buttons")[index].classList.remove("inactive")   
+   }
    else {
-      const customPercentSpace=document.getElementById("button-custom")
+      const customPercentSpace=document.getElementById("percent-button-custom")
       const customPercentage=parseFloat(customPercentSpace.value)/100
       percentage=customPercentage
-      console.log(percentage)
    }
    getTip()
 }

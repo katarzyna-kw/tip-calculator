@@ -13,7 +13,6 @@
   <title>Frontend Mentor | Tip calculator app</title>
 </head>
 <body>
-
   <div class="container">
     <header>
       <h2>
@@ -23,28 +22,30 @@
       </h2>
     </header>
     <main>
+      <!-- start calculator-input section -->
       <div class="calculator-input">
-        <div class="bill-container">
+        <div class="calc-input-section">
           <label>Bill</label>
           <span class="icon-input">
             $
             <input onchange="getTip()" id="bill-amount" class="input-full" type="text" name="bill-amount" placeholder="0.00">
           </span>
+          <p id="error-notif-bill" class="error-notification hide">Bill input must be a number.</p>
         </div>
 
-        <div class="select-tip">
+        <div class="calc-input-section percent">
           Select Tip %
-          <div className="button-container">
-            <button onclick="getPercentage(0.05, 0)" id="percent-5">5%</button>
-            <button onclick="getPercentage(0.10, 1)" id="percent-10">10%</button>
-            <button onclick="getPercentage(0.15, 2)" id="percent-15">15%</button>
-            <button onclick="getPercentage(0.25, 3)" id="percent-25">25%</button>
-            <button onclick="getPercentage(0.50, 4)" id="percent-50">50%</button>
-            <input onchange="getPercentage(0,  5)" id ="button-custom" type="text" placeholder="Custom"></button>
+          <div className="percent-button-container">
+            <button onclick="getPercentage(0.05, 0)" class="percent-buttons inactive">5%</button>
+            <button onclick="getPercentage(0.10, 1)" class="percent-buttons inactive">10%</button>
+            <button onclick="getPercentage(0.15, 2)" class="percent-buttons inactive">15%</button>
+            <button onclick="getPercentage(0.25, 3)" class="percent-buttons inactive">25%</button>
+            <button onclick="getPercentage(0.50, 4)" class="percent-buttons inactive">50%</button>
+            <input onchange="getPercentage(0,  5)" id ="percent-button-custom" type="text" placeholder="Custom"></button>
           </div>
         </div>
 
-        <div class="quantity">
+        <div class="calc-input-section quantity">
           <label>Number of People</label>
           <span class="icon-input">
             &
@@ -52,8 +53,11 @@
           </span>
         </div>
       </div>
+      <!-- end calculator-input section -->
+
+      <!-- start calculator-output section -->
       <div class="calculator-output">
-        <div class="amount-tip">
+        <div class="calc-output-section amount-tip">
           <div class="amount-tip-text">
             <div>
               Tip Amount
@@ -66,7 +70,7 @@
               $0.00
           </div>
         </div>
-        <div class="amount-total">
+        <div class="calc-output-section amount-total">
           <div class="amount-total-text">
             <div>
             Total
@@ -79,9 +83,8 @@
             $0.00
           </div>
         </div>
-        <button class="button-reset">Reset</button>
+        <button onclick="window.location.reload()" id="reset" class="calc-output-section">Reset</button>
       </div>
-      </main>
     </main>
   </div>
   
