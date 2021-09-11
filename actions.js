@@ -6,7 +6,6 @@ let bill=0
 let percentage=0
 let party=0
 
-
 const getTip = () => {
    bill=parseFloat(billAmount.value)
 
@@ -49,4 +48,15 @@ const getResults = () => {
    tipPerPersonSpace.innerHTML=`$${tipPerPerson}`
    totalPerPersonSpace.innerHTML=`$${totalPerPerson}`
 
+}
+
+const getReset = () => {
+   const resetBtn=document.getElementById("reset")
+   if (billAmount.value.length>0 || partySize.value.length>0) {
+      resetBtn.classList.remove("disabled")
+      console.log("text input")
+      resetBtn.classList.add("enabled")
+   }
+   // if (aria-required=false) {
+   //    window.location.reload()
 }

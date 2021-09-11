@@ -28,7 +28,7 @@
           <label>Bill</label>
           <span class="icon-input">
             $
-            <input onchange="getTip()" id="bill-amount" class="input-full" type="text" name="bill-amount" placeholder="0.00">
+            <input onchange="getTip()" id="bill-amount" class="input-full" type="text" name="bill-amount" placeholder="0.00" aria-required="true" onkeyup="getReset()">
           </span>
           <p id="error-notif-bill" class="error-notification hide">Bill input must be a number.</p>
         </div>
@@ -49,7 +49,7 @@
           <label>Number of People</label>
           <span class="icon-input">
             &
-            <input onchange="getTip()" id="party-size" class="input-full" type="text" name="party-size" placeholder="0">
+            <input onchange="getTip()" id="party-size" class="input-full" type="text" name="party-size" placeholder="0" aria-required="true" onkeyup="getReset()">
           </span>
         </div>
       </div>
@@ -83,7 +83,7 @@
             $0.00
           </div>
         </div>
-        <button disabled="disabled" onclick="window.location.reload()" id="reset" class="calc-output-section disabled">Reset</button>
+        <button onclick="location.reload()" id="reset" class="calc-output-section disabled" aria-disabled="true">Reset</button>
       </div>
     </main>
   </div>
