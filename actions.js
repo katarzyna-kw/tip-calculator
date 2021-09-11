@@ -6,6 +6,11 @@ let bill=0
 let percentage=0
 let party=0
 
+
+//create input validation/error for party size, tip %
+//replace placeholders with input images
+
+
 const validateInput = () => {
    const billError=document.getElementById("error-notif-bill")
 
@@ -70,7 +75,6 @@ const getReset = () => {
    if (billAmount.value.length>0 || partySize.value.length>0) {
       resetBtn.classList.remove("disabled")
       resetBtn.classList.add("enabled")
+      resetBtn.disabled=false;
    }
-   // if (aria-required=false) {
-   //    window.location.reload()
 }
