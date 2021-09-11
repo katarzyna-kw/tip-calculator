@@ -6,7 +6,22 @@ let bill=0
 let percentage=0
 let party=0
 
+const validateInput = () => {
+   const billError=document.getElementById("error-notif-bill")
+
+   if(isNaN(Number(billAmount.value))) {
+       billError.classList.remove("hide")
+       billAmount.classList.add("error")
+   } else {
+      // console.log("hide error!")
+      billError.classList.add("hide")
+      billAmount.classList.remove("error")
+   }
+}
+
 const getTip = () => {
+   validateInput()
+
    bill=parseFloat(billAmount.value)
 
    if (isNaN(bill)) {
@@ -54,7 +69,6 @@ const getReset = () => {
    const resetBtn=document.getElementById("reset")
    if (billAmount.value.length>0 || partySize.value.length>0) {
       resetBtn.classList.remove("disabled")
-      console.log("text input")
       resetBtn.classList.add("enabled")
    }
    // if (aria-required=false) {

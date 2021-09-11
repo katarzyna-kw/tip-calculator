@@ -223,6 +223,7 @@ main {
 
    #percent-button-custom {
       width: 25%;
+      font-size: 1.25rem;
    }
 
    #reset {
@@ -234,8 +235,16 @@ main {
    }
 }
 
+@media (min-width: 925px) {
+  
+   #percent-button-custom {
+      font-size: 1.5rem;
+   }
+
+
 @media (min-width: 1200px) {
+  
    main {
       width: 75%;
-
+   }
 }
