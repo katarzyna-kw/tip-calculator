@@ -112,9 +112,7 @@ main {
 }
 
 #percent-button-custom {
-   border: 0;
    background-color: hsl(189, 41%, 97%);
-   /* background-color: lawngreen; */
    width: 40%;
    border-radius: 6px;
    height: 48.78px;
@@ -180,8 +178,8 @@ main {
 }
 
 .error {
-   border: 1px red solid;
-   border-radius: 3px;
+   border: 2px red solid;
+   border-radius: 5gpx;
 }
 
 .hide {

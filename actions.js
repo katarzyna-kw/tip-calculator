@@ -1,5 +1,6 @@
 const billAmount=document.getElementById("bill-amount")
 const partySize=document.getElementById("party-size")
+const customPercentSpace=document.getElementById("percent-button-custom")
 const tipPerPersonSpace=document.getElementById("tip-per-person")
 const totalPerPersonSpace=document.getElementById("total-per-person")
 let bill=0
@@ -7,11 +8,10 @@ let percentage=0
 let party=0
 
 
-//create input validation/error for party size, tip %
-
 const validateInput = () => {
    const billError=document.getElementById("error-notif-bill")
    const partyError=document.getElementById("error-notif-party")
+   const customError=document.getElementById("error-notif-custom")
 
    if(isNaN(Number(billAmount.value))) {
        billError.classList.remove("hide")
@@ -28,6 +28,14 @@ const validateInput = () => {
      partyError.classList.add("hide")
      partySize.classList.remove("error")
   }
+
+  if(isNaN(Number(customPercentSpace.value))) {
+   customError.classList.remove("hide")
+   customPercentSpace.classList.add("error")
+} else {
+  customError.classList.add("hide")
+  customPercentSpace.classList.remove("error")
+}
 }
 
 const getTip = () => {
@@ -60,7 +68,6 @@ const getPercentage = (percent, index) => {
       document.getElementsByClassName("percent-buttons")[index].classList.remove("inactive")   
    }
    else {
-      const customPercentSpace=document.getElementById("percent-button-custom")
       const customPercentage=parseFloat(customPercentSpace.value)/100
       percentage=customPercentage
    }
