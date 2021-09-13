@@ -28,7 +28,7 @@
           <label>Bill</label>
           <span class="icon-input">
             <img src="images/icon-dollar.svg" alt="$" />
-            <input onchange="getTip()" id="bill-amount" class="input-full" type="text" name="bill-amount" placeholder="0.00" aria-required="true" onkeyup="getReset()">
+            <input onchange="getTip(billAmount, billError)" id="bill-amount" class="input-full" type="text" name="bill-amount" placeholder="0.00" aria-required="true" onkeyup="getReset()">
           </span>
           <p id="error-notif-bill" class="error-notification hide">Bill input must be a number.</p>
         </div>
@@ -41,7 +41,7 @@
             <button onclick="getPercentage(0.15, 2)" class="percent-buttons inactive">15%</button>
             <button onclick="getPercentage(0.25, 3)" class="percent-buttons inactive">25%</button>
             <button onclick="getPercentage(0.50, 4)" class="percent-buttons inactive">50%</button>
-            <input onchange="getPercentage(0,  5)" id ="percent-button-custom" type="text" class="percent-buttons" placeholder="Custom"></button>
+            <input onchange="getPercentage(0,  5, customPercentSpace, customError)" id="percent-button-custom" type="text" class="percent-buttons" placeholder="Custom"></button>
           </div>
           <p id="error-notif-custom" class="error-notification hide">Custom input must be a number.</p>
         </div>
@@ -50,7 +50,7 @@
           <label>Number of People</label>
           <span class="icon-input">
             <img src="images/icon-person.svg" alt="person icon" />
-            <input onchange="getTip()" id="party-size" class="input-full" type="text" name="party-size" placeholder="0" aria-required="true" onkeyup="getReset()">
+            <input onchange="getTip(partySize, partyError)" id="party-size" class="input-full" type="text" name="party-size" placeholder="0" aria-required="true" onkeyup="getReset()">
           </span>
           <p id="error-notif-party" class="error-notification hide">Number of people must be a number.</p>
         </div>

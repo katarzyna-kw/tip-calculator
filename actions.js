@@ -1,45 +1,36 @@
+//global variables
 const billAmount=document.getElementById("bill-amount")
 const partySize=document.getElementById("party-size")
 const customPercentSpace=document.getElementById("percent-button-custom")
 const tipPerPersonSpace=document.getElementById("tip-per-person")
 const totalPerPersonSpace=document.getElementById("total-per-person")
+const billError=document.getElementById("error-notif-bill")
+const partyError=document.getElementById("error-notif-party")
+const customError=document.getElementById("error-notif-custom")
+
 let bill=0
 let percentage=0
 let party=0
 
 
-const validateInput = () => {
-   const billError=document.getElementById("error-notif-bill")
-   const partyError=document.getElementById("error-notif-party")
-   const customError=document.getElementById("error-notif-custom")
+const validateInput = (element, elError) => {
 
-   if(isNaN(Number(billAmount.value))) {
-       billError.classList.remove("hide")
-       billAmount.classList.add("error")
+   if(isNaN(Number(element.value))) {
+       elError.classList.remove("hide")
+       element.classList.add("error")
    } else {
-      billError.classList.add("hide")
-      billAmount.classList.remove("error")
+      elError.classList.add("hide")
+      element.classList.remove("error")
    }
-
-   if(isNaN(Number(partySize.value))) {
-      partyError.classList.remove("hide")
-      partySize.classList.add("error")
-  } else {
-     partyError.classList.add("hide")
-     partySize.classList.remove("error")
-  }
-
-  if(isNaN(Number(customPercentSpace.value))) {
-   customError.classList.remove("hide")
-   customPercentSpace.classList.add("error")
-} else {
-  customError.classList.add("hide")
-  customPercentSpace.classList.remove("error")
-}
 }
 
-const getTip = () => {
-   validateInput()
+const getTip = (element, elError) => {
+   if (element, elError) {
+      validateInput(element, elError)
+   }
+   else {
+      validateInput()
+   }
 
    bill=parseFloat(billAmount.value)
 
@@ -56,7 +47,7 @@ const getTip = () => {
    if (bill>0 && party>0) return getResults()
 }
 
-const getPercentage = (percent, index) => {
+const getPercentage = (percent, index, element, elError) => {
    for (let i=0; i<5; i++) {
       console.log(document.getElementsByClassName("percent-buttons")[i])
       document.getElementsByClassName("percent-buttons")[i].classList.remove("active")
@@ -71,7 +62,7 @@ const getPercentage = (percent, index) => {
       const customPercentage=parseFloat(customPercentSpace.value)/100
       percentage=customPercentage
    }
-   getTip()
+   getTip(element, elError)
 }
 
 const getResults = () => {
@@ -80,7 +71,6 @@ const getResults = () => {
 
    tipPerPersonSpace.innerHTML=`$${tipPerPerson}`
    totalPerPersonSpace.innerHTML=`$${totalPerPerson}`
-
 }
 
 const getReset = () => {
