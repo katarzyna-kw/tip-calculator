@@ -8,20 +8,26 @@ let party=0
 
 
 //create input validation/error for party size, tip %
-//replace placeholders with input images
-
 
 const validateInput = () => {
    const billError=document.getElementById("error-notif-bill")
+   const partyError=document.getElementById("error-notif-party")
 
    if(isNaN(Number(billAmount.value))) {
        billError.classList.remove("hide")
        billAmount.classList.add("error")
    } else {
-      // console.log("hide error!")
       billError.classList.add("hide")
       billAmount.classList.remove("error")
    }
+
+   if(isNaN(Number(partySize.value))) {
+      partyError.classList.remove("hide")
+      partySize.classList.add("error")
+  } else {
+     partyError.classList.add("hide")
+     partySize.classList.remove("error")
+  }
 }
 
 const getTip = () => {
