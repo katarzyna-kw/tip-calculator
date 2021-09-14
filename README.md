@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [](https://github.com/katarzyna-kw/tip-calculator)
-- Live Site URL: [](https://katarzyna-kw.github.io/portfolio-website/)
+- Solution URL: [https://github.com/katarzyna-kw/tip-calculator](https://github.com/katarzyna-kw/tip-calculator)
+- Live Site URL: [https://katarzyna-kw.github.io/portfolio-website/](https://katarzyna-kw.github.io/portfolio-website/)
 
 ## My process
 I decided to code this project with pure Javascript to further cement my understanding of Javascript fundamentals. I also used mobile first responsive design, flexbox, CSS, and HTML5.
