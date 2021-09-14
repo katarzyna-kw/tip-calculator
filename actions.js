@@ -1,3 +1,5 @@
+//finish README.md
+
 //global variables
 const billAmount=document.getElementById("bill-amount")
 const partySize=document.getElementById("party-size")
