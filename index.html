@@ -2,17 +2,12 @@
 <html lang="en">
 <head>
   <meta name="description" content="Tip Calculator" />
-  <meta name="title" property="og:title" content="Tip Calculator" />
+  <meta name="title" property="og:title" content="Tip Calculator -- A tip calculator built using HTML, CSS, and vanilla Javascript for a FrontEndMentor.io challenge" />
   <meta property="og:type" content="Website" />
   <meta 
     name="image" 
     property="og:image" 
     content="./images/tip-calculator.png" 
-  />
-  <meta 
-    name="description" 
-    property="og:description" 
-    content="A tip calculator built using HTML, CSS, and vanilla Javascript for a FrontEndMentor.io challenge." 
   />
   <meta name="author" content="Katarzyna Wegrzynowicz" />
   <meta charset="UTF-8">
@@ -22,20 +17,21 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css">
-  <script src="actions.js" defer></script>
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+  <script src="js/actions.js" defer></script>
   <title>Frontend Mentor | Tip calculator app</title>
 </head>
 <body>
   <div class="container">
-    <header role="banner">
+    <header>
       <h1>
         Spli
         <br>
         tter
       </h1>
     </header>
-    <main role="main">
+    <main>
       <!-- start calculator-input section -->
       <div class="calculator-input">
         <div class="calc-input-section">
@@ -99,12 +95,12 @@
             $0.00
           </div>
         </div>
-        <button onclick="location.reload()" id="reset" class="calc-output-section disabled" disabled="true">Reset</button>
+        <button onclick="location.reload()" id="reset" class="calc-output-section disabled" disabled>Reset</button>
       </div>
     </main>
   </div>
   
-  <footer class="attribution" role="contentinfo">
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://katarzyna-kw.github.io/portfolio-website/" target="blank">Katarzyna Wegrzynowicz</a>.
   </footer>
