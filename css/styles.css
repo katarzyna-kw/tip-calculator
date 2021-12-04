@@ -163,6 +163,7 @@ main {
 .enabled {
    background-color: hsl(172, 67%, 45%);
    color: hsl(183, 100%, 15%);
+   cursor: pointer;
 }
 
 #reset {
