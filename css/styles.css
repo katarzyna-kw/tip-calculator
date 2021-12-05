@@ -1,5 +1,17 @@
+html {
+   --cyan: hsl(172, 67%, 45%);
+   --dark-cyan: hsl(183, 100%, 15%);
+   --light-cyan: hsl(185, 41%, 84%);
+   --dark-gray: hsl(186, 14%, 43%);
+   --med-gray: hsl(184, 14%, 56%);
+   --light-gray: hsl(185, 41%, 97%);
+   --light-gray2: hsl(189, 41%, 97%);
+   --white: hsl(0, 0%, 100%); 
+   --attribution-blue: hsl(228, 45%, 44%)
+}
+
 body {
-   background-color: hsl(185, 41%, 84%);
+   background-color: var(--light-cyan);
    font-family: 'Space Mono', serif;
    font-size: 16px;
    font-weight: 400;
@@ -16,7 +28,7 @@ body {
 header {
    display: flex;
    justify-content: center;
-   color: hsl(183, 100%, 15%);
+   color: var(--dark-cyan);
    text-transform: uppercase;
    letter-spacing: .7rem;
    margin: .5rem 0 .5rem 0;
@@ -31,7 +43,7 @@ h1 {
 main {
    display: flex;
    flex-flow: column wrap;
-   background-color: hsl(0, 0%, 100%);
+   background-color: var(--white);
    border-top-left-radius: 15px;
    border-top-right-radius: 15px;
    margin-top: 1.5rem;
@@ -45,7 +57,7 @@ main {
    justify-content: flex-start;
    align-items: center;
    padding: 1.7rem;
-   color: hsl(186, 14%, 43%);
+   color: var(--dark-gray);
 
 }
 
@@ -62,10 +74,10 @@ main {
    justify-content: center;
    align-items: center;
    width: 100%;
-   background-color: hsl(189, 41%, 97%);
+   background-color: var(--light-gray2);
    font-size: 1.5rem;
    margin-top: .5rem;
-   color: hsl(184, 14%, 56%);
+   color: var(--med-gray);
    border-radius: 6px;
 }
 
@@ -73,8 +85,7 @@ main {
    border: 0;
    width: 90%;
    font-family: "Space Mono", serif;
-   background-color: hsl(189, 41%, 97%);
-   /* background-color: hotpink; */
+   background-color: var(--light-gray2);
    font-size: 1.5rem;
    font-weight: 500;
    text-align: right;
@@ -103,17 +114,17 @@ main {
 }
 
 .inactive {
-   background-color: hsl(183, 100%, 15%);
-   color: hsl(0, 0%, 100%);
+   background-color: var(--dark-cyan);
+   color: var(--white);
 }
 
 .active {
-   background-color: hsl(172, 67%, 45%);
-   color: hsl(183, 100%, 15%);
+   background-color: var(--cyan);
+   color: var(--dark-cyan);
 }
 
 #percent-button-custom {
-   background-color: hsl(189, 41%, 97%);
+   background-color: var(--light-gray2);
    width: 40%;
    border-radius: 6px;
    height: 48.78px;
@@ -128,8 +139,8 @@ main {
 
 .calculator-output {
    flex: 1;
-   background-color: hsl(183, 100%, 15%);
-   color: hsl(0, 0%, 100%);
+   background-color: var(--dark-cyan);
+   color: var(--white);
    margin: 1.5rem;
    border-radius: 15px;
    padding-left: 1.5rem;
@@ -152,17 +163,17 @@ main {
 
 .amount {
    font-size: 3rem;
-   color: hsl(172, 67%, 45%);
+   color: var(--cyan);
 }
 
 .disabled {
-   background-color: hsl(186, 14%, 43%);
-   color: hsl(183, 100%, 15%);
+   background-color: var(--dark-gray);
+   color: var(--dark-cyan);
 }
 
 .enabled {
-   background-color: hsl(172, 67%, 45%);
-   color: hsl(183, 100%, 15%);
+   background-color: var(--cyan);
+   color: var(--dark-cyan);
    cursor: pointer;
 }
 
@@ -191,12 +202,12 @@ main {
 .attribution { 
    font-size: 11px; 
    text-align: center; 
-   background-color: hsl(0, 0%, 100%);
+   background-color: var(--white);
    margin-top: 1rem;
    padding: 1rem;
 }
 .attribution a { 
-   color: hsl(228, 45%, 44%); 
+   color: var(--attribution-blue); 
 }
 
 @media (min-width: 768px) {
@@ -231,7 +242,7 @@ main {
    }
 
    .attribution {
-      background-color: hsl(185, 41%, 84%);
+      background-color: var(--light-cyan);
    }
 }
 
