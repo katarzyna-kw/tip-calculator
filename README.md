@@ -11,7 +11,6 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
 - [Author](#author)
 
 ## Overview
@@ -59,11 +58,6 @@ Step 5: With Javascript functionality in place, I went back to the CSS to  final
 ### What I learned
 
 This project was a great opportunity to practice refactoring pure Javascript for cleaner, less repetitive code. For example, I originally wrote the validationInput function with if statements for each of 3 user input elements (bill amount, number of people, custom tip amount). Then, I refactored validationInput to take in two arguments (element and elError) instead, eliminating the need for 3 separate if statements. Instead of 30+ lines of code, the function was reduced to 9 lines of code.
-
-
-### Continued development
-
-I am currently more confident writing code in vanilla JS as opposed to using a JS framework like React. To become more adept at writing code in React, I plan to recreate this project in that framework for learning purposes.
 
 
 ## Author
